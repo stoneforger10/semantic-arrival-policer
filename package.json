@@ -1,0 +1,1 @@
+{"name":"semantic-arrival-policer","version":"0.1.0","private":true,"type":"module","scripts":{"test:unit":"node --test tests/meter.test.mjs","test:sdk":"node scripts/sdk-check.mjs"},"dependencies":{"genlayer-js":"1.1.8","viem":"2.57.7"}}

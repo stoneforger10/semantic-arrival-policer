@@ -1,0 +1,4 @@
+Fictional requirements, not a report of performed work.
+This update requires a database schema migration.
+Operators must rotate authentication credentials as part of the update.
+A planned customer-facing service outage is announced for installation.

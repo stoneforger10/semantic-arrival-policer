@@ -1,0 +1,3 @@
+Fictional draft change notice, not an operational report.
+Whether a database schema migration is required remains undecided. It may be necessary, but the assessment is incomplete.
+Authentication credentials do not need rotation. No customer-facing service outage is planned.

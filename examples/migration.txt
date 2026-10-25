@@ -1,0 +1,3 @@
+Fictional change notice, not proof of real work or service delivery.
+Operators must migrate the database schema before installing this update. The schema migration is mandatory.
+No authentication credential rotation is required. No customer-facing service outage is planned.

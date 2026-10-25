@@ -1,0 +1,15 @@
+# Experimental security model
+
+- No owner/admin policy mutation, graph head, certificate, one-time consume method, token accounting, escrow, external state-changing call or model-generated code execution.
+- Constructor bounds: three distinct 1–240-byte predicates, periods 1–3600 seconds, bursts 1–16. Policy immutable. Semantically vague predicates can cause UNKNOWN; deployment authors must choose clear predicates.
+- Native immediate sender determines the personal meter and nonce scope. No user-supplied actor, identity, clock, vector, cost or final outcome exists in the write API.
+- Native message datetime determines refill. Both quotas are checked atomically. Denials cannot debit the other bucket, push retry time or manufacture credit. Idle refill saturates at burst; OVERSIZE has no finite retry promise.
+- Exact report context/evidence/vector comparison and independent validator fetch/reasoning. Malformed output, disagreement and post-consensus context substitution write no state. Source failure/UNKNOWN fail closed without debit.
+- Full-body SHA verification, strict UTF-8, no truncation; commit-pinned raw GitHub coordinates only. Redirect/provider behavior remains platform trust. Large responses are rejected after acquisition, not prevented from consuming download resources.
+- Content-weight pins are immutable across URL aliases for identical bytes. Every new admission still re-fetches/reclassifies; semantic drift holds rather than overwriting or accepting a cheaper interpretation. Modified bytes and different contracts are distinct identities; no paraphrase identity or global policy is implied.
+- State writes occur only after acquisition, consensus and all deterministic checks. No outward writes/callbacks follow them. Immutable request roots include policy, actor, nonce, exact evidence, cost, outcome and both before/after clocks.
+- No artificial lifetime request cap disables time-based recovery. Historical storage/pins grow without bound. Public access, inference cost, Sybil activity and starvation are not solved; rejected requests can still create audit data and consume network/model work.
+- Preview quotes are explicitly non-binding. They are not permits, delivery proofs or one-time certificates. Downstream consumers must not replay old ADMITTED records as fresh authorization.
+- Native signing uses dedicated, unlocked encrypted test accounts on gasless StudioNet only. No key export, password publication, funding or native-value transfer. Unknown broadcast outcomes stop for history inspection before any retry.
+- Proof verification requires final execution, explicit non-leader-only votes, code equality, state replay, content pin equality, native signer/nonces, zero transaction value and exact contract histories. Readbacks are not transactions. Expected execution errors are labeled as such.
+- Local direct tests do not exercise distributed voting; actual callback tests and finalized live receipts are separate evidence. No audited-production, truthful-document, measured-usage, global-novelty, unanimous-vote or reviewer-acceptance guarantee.

@@ -1,0 +1,11 @@
+.env
+.env.*
+*.key
+*.pem
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+.npm-cache/
+*.log
+artifacts/

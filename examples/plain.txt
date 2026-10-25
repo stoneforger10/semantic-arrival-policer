@@ -1,0 +1,3 @@
+Fictional change notice for testing a text-admission policy, not actual operations.
+This change requires no database schema migration. No authentication credential rotation is required.
+There is no planned customer-facing service outage. Maintenance is entirely online.
