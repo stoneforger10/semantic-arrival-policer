@@ -1,0 +1,1282 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "fixture_commit": "46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf",
+  "accounts": [
+    {
+      "name": "studio-proof-deployer",
+      "address": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+    },
+    {
+      "name": "fairresolve-demo",
+      "address": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+    }
+  ],
+  "transactions": [
+    {
+      "step": "deploy-bounded",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "deploy",
+        "--contract",
+        "contracts/SemanticArrivalPolicer.py",
+        "--args",
+        "The notice requires a database schema migration.",
+        "The notice requires rotating authentication credentials.",
+        "The notice announces a planned customer-facing service outage.",
+        "3600",
+        "4",
+        "3600",
+        "3"
+      ],
+      "nonce_before": "0x182",
+      "verified": true,
+      "hash": "0x78b46fd0158d66162c346b87cbcf4a8513e98654754e6df36bfeec4110643947",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "light",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "light",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt",
+        "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c"
+      ],
+      "nonce_before": "0x183",
+      "verified": true,
+      "hash": "0x440b2da9d5c07bf6b2d78eca8402b679af6b73333231d7dd0cc311a4b9c35fd0",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "migration",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "migration",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt",
+        "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b"
+      ],
+      "nonce_before": "0x184",
+      "verified": true,
+      "hash": "0x65ce66759a9c6d9422b68a08037209b53e46efd6549a704ff17b8864e9c98871",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "principal-limit",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "personal-full",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt",
+        "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c"
+      ],
+      "nonce_before": "0x185",
+      "verified": true,
+      "hash": "0x9b65409439269ce9b1028abbc04ea4010b57d597c276d0b36f0cb32b0557da07",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "peer-admission",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "peer",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt",
+        "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c"
+      ],
+      "nonce_before": "0x22",
+      "verified": true,
+      "hash": "0xd4a827da6de98ce3055f1a70467c64d4253a5f7c2d78931daf3151d06d1afb57",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "shared-limit",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "shared-full",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt",
+        "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b"
+      ],
+      "nonce_before": "0x23",
+      "verified": true,
+      "hash": "0x4fa766d6015667ea1fc1978d7eec6e823c2a425b5d4a9a2465d98a1fdd8ec24c",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "oversize",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "oversize",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/heavy.txt",
+        "4b59668650c510dff77649774b33f44c56c2c3abcda8e4b522d5f41946d53dba"
+      ],
+      "nonce_before": "0x186",
+      "verified": true,
+      "hash": "0x5f539557074dde75cbe42fb00d7ca88cc0395e52d28e7d34fcef8bec149033f1",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "uncertain",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "uncertain",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/uncertain.txt",
+        "19123b1014591484ae7b951ff7c3ebec3088c06bfc4dbe6f91e0f92c00557c21"
+      ],
+      "nonce_before": "0x187",
+      "verified": true,
+      "hash": "0xb7f96a83d60d68223c46902ac70d3b6c9aaaaa26c03d2d36506d823961895d1b",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "hash-mismatch",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "hash-mismatch",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt",
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      ],
+      "nonce_before": "0x188",
+      "verified": true,
+      "hash": "0x3e8f31b039ea5a26bbfa1207a093a9e1c75c11ff30fad98c2f88f57678acedb3",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "nonce-replay",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "light",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt",
+        "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b"
+      ],
+      "nonce_before": "0x189",
+      "verified": true,
+      "expected_message": "Nonce already used",
+      "hash": "0xd0c71c7b9b429e5c8d07e322663863f3beff619918ea0da0fe803fbd78f1faf5",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "unsafe-url",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "unsafe",
+        "https://evil.invalid/x",
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      ],
+      "nonce_before": "0x18a",
+      "verified": true,
+      "expected_message": "Invalid source",
+      "hash": "0x19dbbad6ea86346830c7a0fdc0c793d509aac74cdfad050a77fae384ac086c01",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "invalid-nonce",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "cli_arguments": [
+        "write",
+        "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "police",
+        "--args",
+        "bad nonce",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt",
+        "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c"
+      ],
+      "nonce_before": "0x18b",
+      "verified": true,
+      "expected_message": "Invalid nonce",
+      "hash": "0x88d6e8472a576499dd6405cb20a055e1cfd9a6be0c024ad684a3ccb15086180d",
+      "cli_exit": 0,
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "deploy-refill",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "deploy",
+        "--contract",
+        "contracts/SemanticArrivalPolicer.py",
+        "--args",
+        "The notice requires a database schema migration.",
+        "The notice requires rotating authentication credentials.",
+        "The notice announces a planned customer-facing service outage.",
+        "1",
+        "4",
+        "1",
+        "3"
+      ],
+      "nonce_before": "0x18c",
+      "verified": true,
+      "hash": "0x509e1bb71e51648672163efe14f2862bcf6f0c0a3d9cba14a3b0f3cf679ba19c",
+      "cli_exit": 0,
+      "address": "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "refill-first",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+        "police",
+        "--args",
+        "first",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt",
+        "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b"
+      ],
+      "nonce_before": "0x18d",
+      "verified": true,
+      "hash": "0x11044a5d83bd7195cd6b1480ef998ded115bc50ea9251a393f6f76c55c1fc9a2",
+      "cli_exit": 0,
+      "address": "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    },
+    {
+      "step": "refill-second",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "cli_arguments": [
+        "write",
+        "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+        "police",
+        "--args",
+        "second",
+        "stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt",
+        "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b"
+      ],
+      "nonce_before": "0x18e",
+      "verified": true,
+      "hash": "0x23693c7b05ca68f76b1c8992cfd3f413cdb50d41d152e3618e14ff57f4b7e477",
+      "cli_exit": 0,
+      "address": "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true,
+      "leader_only": false,
+      "initial_validators": 5,
+      "agree_votes": 3,
+      "idle_votes": 2,
+      "disagree_votes": 0,
+      "validator_execution_seen": true
+    }
+  ],
+  "instances": {
+    "bounded": {
+      "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+      "policy": {
+        "criteria": [
+          "The notice requires a database schema migration.",
+          "The notice requires rotating authentication credentials.",
+          "The notice announces a planned customer-facing service outage."
+        ],
+        "weights": [
+          1,
+          2,
+          4
+        ],
+        "global": {
+          "period": 3600,
+          "burst": 4
+        },
+        "principal": {
+          "period": 3600,
+          "burst": 3
+        }
+      },
+      "source": {
+        "address": "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "source_match": true,
+        "sha256": "8115fa3b1f1b950e95ead0d00d3ecabdf1e28420fda0a3f16f2f769c3d8ab5a5"
+      },
+      "replay": {
+        "global_tat": 1792926007,
+        "principal_tats": {
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 1792922407,
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1792915388
+        },
+        "bases": 3,
+        "records": 8
+      }
+    },
+    "refill": {
+      "address": "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+      "policy": {
+        "criteria": [
+          "The notice requires a database schema migration.",
+          "The notice requires rotating authentication credentials.",
+          "The notice announces a planned customer-facing service outage."
+        ],
+        "weights": [
+          1,
+          2,
+          4
+        ],
+        "global": {
+          "period": 1,
+          "burst": 4
+        },
+        "principal": {
+          "period": 1,
+          "burst": 3
+        }
+      },
+      "source": {
+        "address": "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+        "source_match": true,
+        "sha256": "8115fa3b1f1b950e95ead0d00d3ecabdf1e28420fda0a3f16f2f769c3d8ab5a5"
+      },
+      "replay": {
+        "global_tat": 1792912402,
+        "principal_tats": {
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 1792912402
+        },
+        "bases": 1,
+        "records": 2
+      }
+    }
+  },
+  "records": [
+    {
+      "step": "light",
+      "instance": "bounded",
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "nonce": "light",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "basis_root": "463716ee6404afdac9dd42798637849ae8cd7afd462ff1459af065084d8b64ef",
+        "clock": {
+          "at": 1792911607,
+          "global_after": 1792915207,
+          "global_before": 0,
+          "principal_after": 1792915207,
+          "principal_before": 0,
+          "retry_at": 1792911607
+        },
+        "content_root": "ac2c6e9ff0db7f3b8dc4eae074cf462d1352f7642a91babd83ee27c376e1e732",
+        "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "cost": 1,
+        "nonce": "light",
+        "reason": "WITHIN_LIMITS",
+        "report": {
+          "source": {
+            "body": "Fictional change notice for testing a text-admission policy, not actual operations.\nThis change requires no database schema migration. No authentication credential rotation is required.\nThere is no planned customer-facing service outage. Maintenance is entirely online.\n",
+            "hash": "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt"
+          },
+          "spec": {
+            "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "clock": {
+              "at": 1792911607,
+              "global_tat": 0,
+              "principal_tat": 0
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 3600
+              },
+              "principal": {
+                "burst": 3,
+                "period": 3600
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+            "nonce": "light",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt"
+            }
+          },
+          "vector": [
+            "NO",
+            "NO",
+            "NO"
+          ]
+        },
+        "root": "bad51d0821c7c99221854051670bd56183133288da4c95dcc55670adb9dc63d6",
+        "status": "ADMITTED"
+      }
+    },
+    {
+      "step": "migration",
+      "instance": "bounded",
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "nonce": "migration",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "basis_root": "89dcc53f44bc176239415dd74beb29feb91edd5523bd0798126a9975e70c1a17",
+        "clock": {
+          "at": 1792911668,
+          "global_after": 1792922407,
+          "global_before": 1792915207,
+          "principal_after": 1792922407,
+          "principal_before": 1792915207,
+          "retry_at": 1792911668
+        },
+        "content_root": "f6e0732b429ec96fdceb0107b5dd39c4fb56289458da28eb6a6e72db27f8d210",
+        "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "cost": 2,
+        "nonce": "migration",
+        "reason": "WITHIN_LIMITS",
+        "report": {
+          "source": {
+            "body": "Fictional change notice, not proof of real work or service delivery.\nOperators must migrate the database schema before installing this update. The schema migration is mandatory.\nNo authentication credential rotation is required. No customer-facing service outage is planned.\n",
+            "hash": "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt"
+          },
+          "spec": {
+            "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "clock": {
+              "at": 1792911668,
+              "global_tat": 1792915207,
+              "principal_tat": 1792915207
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 3600
+              },
+              "principal": {
+                "burst": 3,
+                "period": 3600
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+            "nonce": "migration",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt"
+            }
+          },
+          "vector": [
+            "YES",
+            "NO",
+            "NO"
+          ]
+        },
+        "root": "eea907d1ca7be397c96a78138e3c737a042c8b6b301b24ff595f188563442a68",
+        "status": "ADMITTED"
+      }
+    },
+    {
+      "step": "principal-limit",
+      "instance": "bounded",
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "nonce": "personal-full",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "basis_root": "463716ee6404afdac9dd42798637849ae8cd7afd462ff1459af065084d8b64ef",
+        "clock": {
+          "at": 1792911730,
+          "global_after": 1792922407,
+          "global_before": 1792922407,
+          "principal_after": 1792922407,
+          "principal_before": 1792922407,
+          "retry_at": 1792915207
+        },
+        "content_root": "ac2c6e9ff0db7f3b8dc4eae074cf462d1352f7642a91babd83ee27c376e1e732",
+        "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "cost": 1,
+        "nonce": "personal-full",
+        "reason": "PRINCIPAL",
+        "report": {
+          "source": {
+            "body": "Fictional change notice for testing a text-admission policy, not actual operations.\nThis change requires no database schema migration. No authentication credential rotation is required.\nThere is no planned customer-facing service outage. Maintenance is entirely online.\n",
+            "hash": "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt"
+          },
+          "spec": {
+            "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "clock": {
+              "at": 1792911730,
+              "global_tat": 1792922407,
+              "principal_tat": 1792922407
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 3600
+              },
+              "principal": {
+                "burst": 3,
+                "period": 3600
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+            "nonce": "personal-full",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt"
+            }
+          },
+          "vector": [
+            "NO",
+            "NO",
+            "NO"
+          ]
+        },
+        "root": "07e9e929b6b09e0119c621d4aafc0459e985ec3b2d1f184283ae284568a25b2e",
+        "status": "DENIED"
+      }
+    },
+    {
+      "step": "peer-admission",
+      "instance": "bounded",
+      "actor": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "nonce": "peer",
+      "state": {
+        "actor": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+        "basis_root": "463716ee6404afdac9dd42798637849ae8cd7afd462ff1459af065084d8b64ef",
+        "clock": {
+          "at": 1792911788,
+          "global_after": 1792926007,
+          "global_before": 1792922407,
+          "principal_after": 1792915388,
+          "principal_before": 0,
+          "retry_at": 1792911788
+        },
+        "content_root": "ac2c6e9ff0db7f3b8dc4eae074cf462d1352f7642a91babd83ee27c376e1e732",
+        "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "cost": 1,
+        "nonce": "peer",
+        "reason": "WITHIN_LIMITS",
+        "report": {
+          "source": {
+            "body": "Fictional change notice for testing a text-admission policy, not actual operations.\nThis change requires no database schema migration. No authentication credential rotation is required.\nThere is no planned customer-facing service outage. Maintenance is entirely online.\n",
+            "hash": "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt"
+          },
+          "spec": {
+            "actor": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+            "clock": {
+              "at": 1792911788,
+              "global_tat": 1792922407,
+              "principal_tat": 0
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 3600
+              },
+              "principal": {
+                "burst": 3,
+                "period": 3600
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+            "nonce": "peer",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt"
+            }
+          },
+          "vector": [
+            "NO",
+            "NO",
+            "NO"
+          ]
+        },
+        "root": "4aa8482f8d19f7e7e7a8325a897aada48ee4cd7218a9f5688e5fbb7b63eba721",
+        "status": "ADMITTED"
+      }
+    },
+    {
+      "step": "shared-limit",
+      "instance": "bounded",
+      "actor": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "nonce": "shared-full",
+      "state": {
+        "actor": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+        "basis_root": "89dcc53f44bc176239415dd74beb29feb91edd5523bd0798126a9975e70c1a17",
+        "clock": {
+          "at": 1792911849,
+          "global_after": 1792926007,
+          "global_before": 1792926007,
+          "principal_after": 1792915388,
+          "principal_before": 1792915388,
+          "retry_at": 1792918807
+        },
+        "content_root": "f6e0732b429ec96fdceb0107b5dd39c4fb56289458da28eb6a6e72db27f8d210",
+        "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "cost": 2,
+        "nonce": "shared-full",
+        "reason": "GLOBAL",
+        "report": {
+          "source": {
+            "body": "Fictional change notice, not proof of real work or service delivery.\nOperators must migrate the database schema before installing this update. The schema migration is mandatory.\nNo authentication credential rotation is required. No customer-facing service outage is planned.\n",
+            "hash": "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt"
+          },
+          "spec": {
+            "actor": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+            "clock": {
+              "at": 1792911849,
+              "global_tat": 1792926007,
+              "principal_tat": 1792915388
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 3600
+              },
+              "principal": {
+                "burst": 3,
+                "period": 3600
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+            "nonce": "shared-full",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt"
+            }
+          },
+          "vector": [
+            "YES",
+            "NO",
+            "NO"
+          ]
+        },
+        "root": "7682f23046d5c833f528d801e046e68df6351a6f2180a1a8838a11d889a455ff",
+        "status": "DENIED"
+      }
+    },
+    {
+      "step": "oversize",
+      "instance": "bounded",
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "nonce": "oversize",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "basis_root": "bddcc18c20888b5179ef85684e2e23d9bb2f1d22eb68e222ae22a612df6e2148",
+        "clock": {
+          "at": 1792911916,
+          "global_after": 1792926007,
+          "global_before": 1792926007,
+          "principal_after": 1792922407,
+          "principal_before": 1792922407,
+          "retry_at": 0
+        },
+        "content_root": "c469e2303b3548d39a5a8be48c118e0dcf44141643e1688bd2eb153edb50712d",
+        "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "cost": 8,
+        "nonce": "oversize",
+        "reason": "GLOBAL_AND_PRINCIPAL",
+        "report": {
+          "source": {
+            "body": "Fictional requirements, not a report of performed work.\nThis update requires a database schema migration.\nOperators must rotate authentication credentials as part of the update.\nA planned customer-facing service outage is announced for installation.\n",
+            "hash": "4b59668650c510dff77649774b33f44c56c2c3abcda8e4b522d5f41946d53dba",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/heavy.txt"
+          },
+          "spec": {
+            "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "clock": {
+              "at": 1792911916,
+              "global_tat": 1792926007,
+              "principal_tat": 1792922407
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 3600
+              },
+              "principal": {
+                "burst": 3,
+                "period": 3600
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+            "nonce": "oversize",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "4b59668650c510dff77649774b33f44c56c2c3abcda8e4b522d5f41946d53dba",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/heavy.txt"
+            }
+          },
+          "vector": [
+            "YES",
+            "YES",
+            "YES"
+          ]
+        },
+        "root": "3a12259ef35dadff2ec28067c748a9bfd95e5c0d79cfe698318f814177377f2a",
+        "status": "OVERSIZE"
+      }
+    },
+    {
+      "step": "uncertain",
+      "instance": "bounded",
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "nonce": "uncertain",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "basis_root": "",
+        "clock": {
+          "at": 1792911983,
+          "global_after": 1792926007,
+          "global_before": 1792926007,
+          "principal_after": 1792922407,
+          "principal_before": 1792922407,
+          "retry_at": 0
+        },
+        "content_root": "3f92a23f5a327e9ef2fddd8a1c7df737417fb528259b0bdb551c2353242b9145",
+        "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "cost": 0,
+        "nonce": "uncertain",
+        "reason": "UNRESOLVED_PREDICATE",
+        "report": {
+          "source": {
+            "body": "Fictional draft change notice, not an operational report.\nWhether a database schema migration is required remains undecided. It may be necessary, but the assessment is incomplete.\nAuthentication credentials do not need rotation. No customer-facing service outage is planned.\n",
+            "hash": "19123b1014591484ae7b951ff7c3ebec3088c06bfc4dbe6f91e0f92c00557c21",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/uncertain.txt"
+          },
+          "spec": {
+            "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "clock": {
+              "at": 1792911983,
+              "global_tat": 1792926007,
+              "principal_tat": 1792922407
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 3600
+              },
+              "principal": {
+                "burst": 3,
+                "period": 3600
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+            "nonce": "uncertain",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "19123b1014591484ae7b951ff7c3ebec3088c06bfc4dbe6f91e0f92c00557c21",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/uncertain.txt"
+            }
+          },
+          "vector": [
+            "UNKNOWN",
+            "NO",
+            "NO"
+          ]
+        },
+        "root": "a4352eb80b47f8b2f880f8f817ab208e373217f428bedd614bc58cf1696e1273",
+        "status": "UNCERTAIN"
+      }
+    },
+    {
+      "step": "hash-mismatch",
+      "instance": "bounded",
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "nonce": "hash-mismatch",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "basis_root": "",
+        "clock": {
+          "at": 1792912042,
+          "global_after": 1792926007,
+          "global_before": 1792926007,
+          "principal_after": 1792922407,
+          "principal_before": 1792922407,
+          "retry_at": 0
+        },
+        "content_root": "f74dae6b5828334fbd313f0984de5e8971e82d25c89ef2cf8a4329d226140ff1",
+        "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+        "cost": 0,
+        "nonce": "hash-mismatch",
+        "reason": "HASH_MISMATCH",
+        "report": {
+          "source": {
+            "body": "Fictional change notice for testing a text-admission policy, not actual operations.\nThis change requires no database schema migration. No authentication credential rotation is required.\nThere is no planned customer-facing service outage. Maintenance is entirely online.\n",
+            "hash": "dd49f492147f2053e83a2258a584185c658595880bfbb82e2b66c7774aecc86c",
+            "http": 200,
+            "status": "HASH_MISMATCH",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt"
+          },
+          "spec": {
+            "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "clock": {
+              "at": 1792912042,
+              "global_tat": 1792926007,
+              "principal_tat": 1792922407
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 3600
+              },
+              "principal": {
+                "burst": 3,
+                "period": 3600
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0x325eD32798766120aE5d6385bc8f284923b90388",
+            "nonce": "hash-mismatch",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/plain.txt"
+            }
+          },
+          "vector": []
+        },
+        "root": "b7101433fe2387834c9e652bf35dbf2d8a0d0e9631c8cab6f07c06227c237d29",
+        "status": "HELD"
+      }
+    },
+    {
+      "step": "refill-first",
+      "instance": "refill",
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "nonce": "first",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "basis_root": "ee0eabe15895e24d330c7c7d3b51192f0301a301f1ba75bd81f000e1571f12a8",
+        "clock": {
+          "at": 1792912337,
+          "global_after": 1792912339,
+          "global_before": 0,
+          "principal_after": 1792912339,
+          "principal_before": 0,
+          "retry_at": 1792912337
+        },
+        "content_root": "a286028edc77f5c0992748226b0826313997f348c2128a271f4c088e53d15ae1",
+        "contract": "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+        "cost": 2,
+        "nonce": "first",
+        "reason": "WITHIN_LIMITS",
+        "report": {
+          "source": {
+            "body": "Fictional change notice, not proof of real work or service delivery.\nOperators must migrate the database schema before installing this update. The schema migration is mandatory.\nNo authentication credential rotation is required. No customer-facing service outage is planned.\n",
+            "hash": "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt"
+          },
+          "spec": {
+            "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "clock": {
+              "at": 1792912337,
+              "global_tat": 0,
+              "principal_tat": 0
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 1
+              },
+              "principal": {
+                "burst": 3,
+                "period": 1
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+            "nonce": "first",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt"
+            }
+          },
+          "vector": [
+            "YES",
+            "NO",
+            "NO"
+          ]
+        },
+        "root": "304b15d2cecb53393c7847717969254afca1d250f5c0b1167d6e8ce134484c91",
+        "status": "ADMITTED"
+      }
+    },
+    {
+      "step": "refill-second",
+      "instance": "refill",
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "nonce": "second",
+      "state": {
+        "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+        "basis_root": "ee0eabe15895e24d330c7c7d3b51192f0301a301f1ba75bd81f000e1571f12a8",
+        "clock": {
+          "at": 1792912400,
+          "global_after": 1792912402,
+          "global_before": 1792912339,
+          "principal_after": 1792912402,
+          "principal_before": 1792912339,
+          "retry_at": 1792912400
+        },
+        "content_root": "a286028edc77f5c0992748226b0826313997f348c2128a271f4c088e53d15ae1",
+        "contract": "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+        "cost": 2,
+        "nonce": "second",
+        "reason": "WITHIN_LIMITS",
+        "report": {
+          "source": {
+            "body": "Fictional change notice, not proof of real work or service delivery.\nOperators must migrate the database schema before installing this update. The schema migration is mandatory.\nNo authentication credential rotation is required. No customer-facing service outage is planned.\n",
+            "hash": "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt"
+          },
+          "spec": {
+            "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "clock": {
+              "at": 1792912400,
+              "global_tat": 1792912339,
+              "principal_tat": 1792912339
+            },
+            "configuration": {
+              "criteria": [
+                "The notice requires a database schema migration.",
+                "The notice requires rotating authentication credentials.",
+                "The notice announces a planned customer-facing service outage."
+              ],
+              "global": {
+                "burst": 4,
+                "period": 1
+              },
+              "principal": {
+                "burst": 3,
+                "period": 1
+              },
+              "weights": [
+                1,
+                2,
+                4
+              ]
+            },
+            "contract": "0xED5D4ea22aA0F00894187088b2E3AF8b18041A57",
+            "nonce": "second",
+            "policy": "semantic-arrival-policer-v1",
+            "source": {
+              "sha256": "e3612f4dcf95f0e26d9405b54a8246d4e49d689705a04a5999d207efaaf75e6b",
+              "url": "https://raw.githubusercontent.com/stoneforger10/semantic-arrival-policer/46d754afb27a7ba2a3af853e18f1dc4dc47ec3cf/examples/migration.txt"
+            }
+          },
+          "vector": [
+            "YES",
+            "NO",
+            "NO"
+          ]
+        },
+        "root": "06bbaa0252249bc23659e2676f84c15f63a018b94ccaaa0f2d9b43c41d64b768",
+        "status": "ADMITTED"
+      }
+    }
+  ],
+  "final_readback_verified": true,
+  "live_refill_verified": true,
+  "contract_history_matched": true
+}
