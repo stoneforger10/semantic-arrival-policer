@@ -5,7 +5,7 @@ assert(p.final_readback_verified&&p.contract_history_matched&&p.live_refill_veri
 assert(p.transactions.every(t=>t.verified&&t.status==='FINALIZED'&&t.consensus==='MAJORITY_AGREE'&&t.leader_only===false&&t.agree_votes>=2));
 const repo='https://github.com/stoneforger10/semantic-arrival-policer',explorer='https://explorer-studio.genlayer.com';
 const title='SemanticArrivalPolicer — Consensus-Metered Dual-Rate Admission';
-const description=`SemanticArrivalPolicer is a reusable weighted admission primitive. Every request independently fetches a commit-pinned HTTPS document. Leader and validators re-evaluate three immutable predicates; exact agreement binds the complete evidence, vector, native sender, nonce, time and before-clocks.
+const description=`SemanticArrivalPolicer is a weighted admission primitive. Every request independently fetches a commit-pinned HTTPS document. Leader and validators re-evaluate three immutable predicates; exact agreement binds the complete evidence, vector, native sender, nonce, time and before-clocks.
 
 Definite labels select weight 1–8. Shared and per-address GCRA clocks admit atomically or preserve both clocks with an exact snapshot retry time. Unknown, failed acquisition, changed pinned labels and oversized requests cannot debit quota. Identical bytes share an immutable cost pin across URL aliases; every retry still re-fetches and reclassifies.
 
